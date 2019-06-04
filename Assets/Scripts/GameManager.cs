@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     }
 
     int score = 0;
-    bool gameOver = false;
+    bool gameOver = true;
 
     public bool GameOver { get {return gameOver; } }
 
@@ -33,13 +33,13 @@ public class GameManager : MonoBehaviour
     }
 
     void OnEnable() {
-        CountdownText.OnCountdownFinished +=  OnCountdownFinished;
+        CountdownText.OnCountdownFinished += OnCountdownFinished;
         TapController.OnPlayerDied += OnPlayerDied;
         TapController.OnPlayerScored += OnPlayerScored;
     }
 
     void OnDisable() {
-        CountdownText.OnCountdownFinished -=  OnCountdownFinished;
+        CountdownText.OnCountdownFinished -= OnCountdownFinished;
         TapController.OnPlayerDied -= OnPlayerDied;
         TapController.OnPlayerScored -= OnPlayerScored;
     }
@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
     }
 
     void SetPageState(PageState state){
-        Debug.Log("SetPageState is running");
+        // Debug.Log("SetPageState is running");
         switch (state) {
             case PageState.None:
                 startPage.SetActive(false);
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
                 countdownPage.SetActive(false);
                 break;
             case PageState.Countdown:
-                Debug.Log("Inside Countdown is running");
+                // Debug.Log("Inside Countdown is running");
                 startPage.SetActive(false);
                 gameOverPage.SetActive(false);
                 countdownPage.SetActive(true);

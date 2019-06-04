@@ -64,6 +64,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CountdownText.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\HighScoreText.cs" />
+    <Compile Include="Assets\Scripts\Parallax.cs" />
     <Compile Include="Assets\Scripts\TapController.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Project/Unity/FlapBird/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

@@ -29,6 +29,8 @@ public class TapController : MonoBehaviour
         forwardRotation = Quaternion.Euler(0, 0, 45);
         instGame = GameManager.GameInstance;
 
+        rbody.simulated = false;
+
         // initially, after we start the game. The bird does not get affected by physics
         // rbody.simulated = false; 
     }
